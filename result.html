@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedXTech</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+          background-color: #d2f7ef;
+        }
+      </style>
+</head>
+<body>
+
+<!-- header section starts -->
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>Teeth First</a>
+
+    <nav class="navbar">
+       
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#Social works">Social works</a>
+        <a href="#Partners">Partners</a>
+       
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+    
+</header>
+
+<section class="about1" id="about">
+    <div class="row">
+        <div class="image">
+            <img src="static/image/result-removebg-preview.png" alt="" height="540" width="60">
+        </div>
+    
+        <div class="content" style="padding-left: 80px; padding-bottom: 90px;">
+            <h3>Results</h3>
+            <h1>These are the outcomes based on your image</h1>
+            <h2>Predicted Class: {{ predicted_class }}</h2>
+            <h2>Accuracy: {{ accuracy }}% with our Dataset</h2>
+        </div>
+    </div>
+</section>   
+
+<!-- doctors section starts  -->
+
+<section class="doctors" id="doctors" style="padding-left: 20%;">
+
+    <h1 class="heading"> our output <span>Bifurcation</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <a href="">
+            <img src="static/image/w1.jpg" alt="">
+            <h3>Stage 0</h3>
+            <span>Clean healthy Teeth</span>
+        </a>  <!-- here we push our backend -->
+            <div class="share">
+              
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="">
+            <img src="static/image/w2.jpg" alt="">
+            <h3>Stage 1</h3>
+            <span> White Lesians, can be cured easily</span>
+        </a>
+            <div class="share">
+                
+            </div>
+        </div>
+
+        <div class="box">
+            <a href="">
+            <img src="static/image/w3.jpg" alt="">
+            <h3>Stage 2</h3>
+            <span> Brownish caries, needs to get checked.</span>
+        </a>
+            <div class="share">
+            
+               
+            </div>
+
+        </div>
+
+        <div class="box">
+            <a href="psyco.html">
+            <img src="static/image/w4.jpg" alt="">
+            <h3>Stage 3</h3>
+            <span>Severe cavities detected</span>
+        </a>
+            <div class="share">
+                
+            </div>
+        </div>
+
+    </div>
+
+</section><!--ends-->
+
+
+         <section class="about" id="about">
+
+            <h1 class="heading"> <span>about</span> us </h1>
+        
+            <div class="row">
+        
+                <div class="image">
+                    <img src="static/image/pro.jpg" alt="">
+                </div>
+        
+                <div class="content">
+                    <h3>we take care of your healthy teeth life</h3>
+                    <p>Teeth First is a platforms which allows you to connect to the best doctors from the top Medical centres.</p>
+                    <p>Also we raise funds for a better treatment of the needy people and support them to live in a hyginic enviroment.</p>
+                    <p>We are continuously working to collaborate with more and more reputed clinics across India.</p>
+                    <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+                </div>
+        
+            </div>
+        
+        </section>
+           
+         <!--<section class="blogs" id="blogs">
+
+    <h1 class="heading"> our <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="image/Phisiotherapy-bro.svg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                </div>
+                <h3>blog title goes here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="image/Researchers-bro.svg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                </div>
+                <h3>blog title goes here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="image/AIDS Research-bro.svg" alt="">
+            </div>
+            <div class="content">
+                <div class="icon">
+                    <a href="#"> <i class="fas fa-calendar"></i> 1st may, 2021 </a>
+                    <a href="#"> <i class="fas fa-user"></i> by admin </a>
+                </div>
+                <h3>blog title goes here</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, eius.</p>
+                <a href="#" class="btn"> learn more <span class="fas fa-chevron-right"></span> </a>
+            </div>
+        </div>!-->
+    </div>
+    </section>
+    
+    <section class="footer" id="footer">
+
+    <div class="credit" > Created  by <span>Team B11 CSE-6B
+    </span></div>
+
+</section>
+
+

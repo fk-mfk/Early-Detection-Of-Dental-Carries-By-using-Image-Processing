@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeth First</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        body {
+            background-color: #d2f7ef;
+        }
+    </style>
+</head>
+<body>
+    
+<!-- header section starts -->
+<header class="header">
+
+    <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>MedXTech</a>
+
+    <nav class="navbar">
+       
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#Social works">Social works</a>
+        <a href="#Partners">Partners</a>
+       
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<!-- header section ends -->
+
+<section class="about1" id="about">
+    <div class="row">
+        <div class="image">
+            <img src="static/image/teeth.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Your teeth is our priority.</h3>
+            <a href="{{ url_for('doctorlogin') }}" target="_main" class="btn"> Dentist Login <span class="fas fa-chevron-right"></span> </a> 
+            <a href="{{ url_for('patientlogin') }}" class="btn"> Patient Login <span class="fas fa-chevron-right"></span> </a><br>
+            <a href="{{ url_for('frist') }}" class="btn"> Continue as guest</a>
+         </div>
+    </div>
+</section>
+    
+<section class="about" id="about">
+    <h1 class="heading"> <span>about</span> us </h1>
+    <div class="row">
+        <div class="image">
+            <img src="static/image/about-img.svg" alt="">
+        </div>
+        <div class="content">
+            <h3>We take care of your healthy teeth life</h3>
+            <p>MedXTech is a platform that allows you to connect with the best doctors from the top Medical centres.</p>
+            <p>We also raise funds for a better treatment of the needy people and support them to live in a hygienic environment.</p>
+            <p>We are continuously working to collaborate with more and more reputed clinics across India.</p>
+            <a href="#" class="btn"> Learn more <span class="fas fa-chevron-right"></span> </a>
+        </div>
+    </div>
+</section>
+

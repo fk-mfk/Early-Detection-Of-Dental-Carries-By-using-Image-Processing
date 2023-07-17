@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="width=device-width, intial-scale=1.0">
+        <title> Register</title>
+        <link rel="stylesheet" href="static\css\form.css">
+        <link rel="stylesheet" href="static\css\style.css">
+        <script src="static\js\sript3.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+          background-color: #d2f7ef;
+        }
+      </style>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+
+    </head>
+    <body>
+        <header class="header">
+
+            <a href="#" class="logo"> <i class="fas fa-heartbeat"></i>Teeth First</a>
+        
+            <nav class="navbar">
+               
+                <a href="index.html">Home</a>
+                <a href="#Feedbacks">Feedbacks</a>
+                <a href="#Social works">Social works</a>
+                <a href="#Partners">Partners</a>
+               
+            </nav>
+        
+            <div id="menu-btn" class="fas fa-bars"></div>
+        
+        </header>
+        <div class="form">
+            <h2>
+                Patient Login
+            </h2>
+            
+        <div class="image">
+            <img src="static/image/clinic-removebg-preview.png" alt="" height="200" width="340" class="center">
+            <style>
+                .center {
+                  display: block;
+                  margin: auto;
+                }
+              </style>
+
+        </div>
+                <form action="#" method="post" id="login-form" >
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <div class="efg" button type="button" id="ttt">Submit</button></div>
+                    <div class="abc">Not Signed up? <a href="{{ url_for('regis') }}"> Signup Now </a>
+                    <!--<button type="button" onclick="window.location.href='registration_Patient.html'">Signup Now</button>-->
+                    </div>
+                  </form>
+                  <script>
+                    function showAlert() {
+                        alert("Thank you for submitting the form!");
+                    }
+                </script>
+            </div>
+          <!--  <p><div class="link">Not Signed up? <a href="registration_Patient.html"> Signup Now </a></p>-->
+            </div>
+        </div> 
+     <!--  <div><a href="book.html">Go to Booking Page</a></div> -->
+     <style>
+        .abc {
+          background-color: #75ad31;
+          border: none;
+          color: white;
+          padding: 10px 12px;
+          text-align: right;
+          font-size: 16px;
+          margin: 4px 2px;
+          opacity: 0.8;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+        .efg{
+          background-color: #eb3636;
+          border: none;
+          color: white;
+          padding: 10px 22px;
+          text-align: right;
+          font-size: 16px;
+          margin: 4px 2px;
+          opacity: 0.8;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .abc:hover {opacity: 1}
+        </style>
+        </head>
+        
+        <script>
+          // Initialize Firebase
+          var firebaseConfig = {
+            apiKey: "AIzaSyCq3Vvr68v069xm4yrsv8Ktb53RczmP-3k",
+            authDomain: "medx-dd284.firebaseapp.com",
+            databaseURL: "https://medx-dd284-default-rtdb.firebaseio.com",
+            projectId: "medx-dd284",
+            storageBucket: "medx-dd284.appspot.com",
+            messagingSenderId: "654630654242",
+            appId: "1:654630654242:web:059f9a35da2d41edc7557b",
+            measurementId: "G-LTTWTZ1HSV"
+          };
+          firebase.initializeApp(firebaseConfig);
+        </script>
+        <script>
+          // Function to handle the login form submission
+          function handleLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+        
+            firebase
+              .auth()
+              .signInWithEmailAndPassword(username, password)
+              .then(function () {
+                // Login successful, perform any desired actions (e.g., redirect)
+                alert("Login successful!");
+                // Replace "book.html" with the desired destination page after login
+                window.location.href = "{{ url_for('frist') }}";
+              })
+              .catch(function (error) {
+                // Handle login errors
+                var errorMessage = error.message;
+                alert(errorMessage);
+              });
+          }
+        
+          // Add an event listener to the submit button
+          document.getElementById("ttt").addEventListener("click", function () {
+            handleLogin();
+          });
+        </script>
+        
+        
+        
+        
+    </body>
+</html>

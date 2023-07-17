@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeth first </title>
+    <style>
+      body {
+        background-color: #e4fdf8;
+      }
+    </style>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="index.html">
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="static\js\script2.js"></script>
+</head>
+  <body>
+    <div class="image">
+            <img src="static/image/about-img.svg" alt="" height="340" width="340">
+        </div>
+      
+    <input
+      type="file"
+      class="inputFile"
+      id="fileInp"
+      onchange="getFile(event)"
+      accept="image/png, image/jpeg, video/mp4"
+    />
+    
+    <label for="fileInp">+</label>
+    <span class="fileText"></span>
+    <div class="content" style="display: inline block; margin: 5px;">
+      <button style="margin:5px; border-radius: 35px; display: block inline; " onclick="uploadImage()">UPLOAD IMAGE</button>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/png, image/jpeg, video/mp4">
+        <input type="submit" value="Upload">
+      <button style="margin:5px; border-radius: 35px; display: block inline; " ><a style="text-decoration: none; color: #e4fdf8; text-transform: uppercase;" href="{{ url_for('result') }}" target="_main">See Results <span class="fas fa-chevron-right"></span></a></button>
+    
+    </div>
+      <div class="content" style="display: block inline; ">
+         
+     </div>
+
+    <div class="bar">
+      <div class="progress"></div>
+    </div>
+    <div class="uploadPercentage">0%</div>
+
+    <div class="imageUploaded">
+      <img alt="" class="img" />
+    </div>
+  </div>
+  <!--STYLE-->
+
+   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+   <script src="static\js\script2.js"></script>
+  </body>
+</html>
